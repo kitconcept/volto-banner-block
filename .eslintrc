@@ -1,6 +1,6 @@
 {
   "extends": ["react-app", "prettier", "plugin:jsx-a11y/recommended"],
-  "plugins": ["prettier", "react-hooks"],
+  "plugins": ["prettier", "react-hooks", "jsx-a11y"],
   "env": {
     "es6": true,
     "browser": true,
@@ -31,7 +31,7 @@
     "jsx-a11y/label-has-associated-control": "off"
   },
   "globals": {
-    "root": true,
+    "root": false,
     "__DEVELOPMENT__": true,
     "__CLIENT__": true,
     "__SERVER__": true,

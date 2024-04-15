@@ -44,8 +44,5 @@
   },
   "peerDependencies": {
     "@plone/volto": "^17.0.0"
-  },
-  "resolutions": {
-    "eslint-plugin-jsx-a11y": "6.8.0"
   }
 }
