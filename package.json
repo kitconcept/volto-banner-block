@@ -24,7 +24,7 @@
   "devDependencies": {
     "@plone/scripts": "^3.3.2",
     "@babel/eslint-parser": "7.22.15",
-    "eslint": "8.49.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-react-app": "7.0.1",
     "eslint-plugin-flowtype": "8.0.3",
@@ -44,5 +44,8 @@
   },
   "peerDependencies": {
     "@plone/volto": "^17.0.0"
+  },
+  "resolutions": {
+    "eslint-plugin-jsx-a11y": "6.8.0"
   }
 }
