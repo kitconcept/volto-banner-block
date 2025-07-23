@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.1.0 (2025-07-23)
+
+### Feature
+
+- Add Spanish translation #16 [@macagua] [#16](https://github.com/kitconcept/volto-banner-block/issue/16)
+
 ## 1.0.1 (2025-03-10)
 
 ### Internal
