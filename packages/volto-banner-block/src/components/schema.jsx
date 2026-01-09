@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
 
 const messages = defineMessages({
   Banner: {
@@ -20,6 +21,10 @@ const messages = defineMessages({
   AltTextHintLinkText: {
     id: 'Describe the purpose of the image.',
     defaultMessage: 'Describe the purpose of the image.',
+  },
+  BlockWidth: {
+    id: 'Block Width',
+    defaultMessage: 'Block Width',
   },
   Line1: {
     id: 'Line 1',
@@ -70,4 +75,21 @@ export const BannerBlockSchema = (props) => {
     },
     required: [],
   };
+};
+export const BannerStylingSchema = ({ schema, formData, intl }) => {
+  addStyling({ schema, intl });
+
+  schema.properties.styles.schema.fieldsets[0].fields = [
+    'blockWidth:noprefix',
+    ...schema.properties.styles.schema.fieldsets[0].fields,
+  ];
+
+  schema.properties.styles.schema.properties['blockWidth:noprefix'] = {
+    widget: 'blockWidth',
+    title: intl.formatMessage(messages.BlockWidth),
+    default: 'default',
+    filterActions: ['layout', 'default'],
+  };
+
+  return schema;
 };
