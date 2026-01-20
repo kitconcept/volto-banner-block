@@ -15,16 +15,16 @@
     right: 0;
     left: 0;
     width: 100%;
-    max-width: $layout-container-width;
+    max-width: var(--layout-container-width, 1440px);
     height: 300px;
     padding: 50px 0 50px 50px;
     margin: 0 auto;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    @media only screen and (max-width: $largest-mobile-screen) {
-      max-width: $narrow-container-width;
+    @media only screen and (max-width: var(--largest-mobile-screen, 768px)) {
+      max-width: var(--narrow-container-width, 620px);
     }
     p {
-      max-width: $narrow-container-width;
+      max-width: var(--narrow-container-width, 620px);
       margin-bottom: 0;
       color: #fff;
       font-size: 33px;
@@ -32,7 +32,7 @@
       font-weight: 300;
       line-height: 42px;
 
-      @media only screen and (max-width: $largest-mobile-screen) {
+      @media only screen and (max-width: var(--largest-mobile-screen, 768px)) {
         font-size: 24px;
         line-height: 33px;
       }
