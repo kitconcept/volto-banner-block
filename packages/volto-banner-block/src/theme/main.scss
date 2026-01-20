@@ -12,13 +12,13 @@
   .text {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     width: 100%;
     max-width: $layout-container-width;
     height: 300px;
-    margin: 0 auto;
     padding: 50px 0 50px 50px;
+    margin: 0 auto;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     @media only screen and (max-width: $largest-mobile-screen) {
       max-width: $narrow-container-width;
