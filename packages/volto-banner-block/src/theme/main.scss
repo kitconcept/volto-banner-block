@@ -1,4 +1,5 @@
 .block.banner {
+  position: relative;
   width: 100%;
   height: 300px;
 
@@ -12,25 +13,37 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    right: 0;
+    width: 100%;
+    max-width: $layout-container-width;
     height: 300px;
+    margin: 0 auto;
     padding: 50px 0 50px 50px;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-
+    @media only screen and (max-width: $largest-mobile-screen) {
+      max-width: $narrow-container-width;
+    }
     p {
-      width: 100%;
+      max-width: $narrow-container-width;
       margin-bottom: 0;
       color: #fff;
       font-size: 33px;
       font-style: normal;
       font-weight: 300;
       line-height: 42px;
+
+      @media only screen and (max-width: $largest-mobile-screen) {
+        font-size: 24px;
+        line-height: 33px;
+      }
     }
   }
 }
+
 .block.banner.has--block-width--layout {
   max-width: 100% !important;
 }
+
 .block-editor-banner .block.banner .ui.message {
   height: 300px;
 }
