@@ -12,16 +12,17 @@
   .text {
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
     width: 100%;
     max-width: var(--layout-container-width, 1440px);
+    padding: 50px 1px 50px 200px;
     height: 300px;
-    padding: 50px 0 50px 50px;
     margin: 0 auto;
+    overflow: hidden;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    @media only screen and (max-width: var(--largest-mobile-screen, 768px)) {
+    @media only screen and (max-width: 768px) {
       max-width: var(--narrow-container-width, 620px);
+      padding: 25px 1px 50px 20px;
     }
     p {
       max-width: var(--narrow-container-width, 620px);
@@ -32,7 +33,7 @@
       font-weight: 300;
       line-height: 42px;
 
-      @media only screen and (max-width: var(--largest-mobile-screen, 768px)) {
+      @media only screen and (max-width: 768px) {
         font-size: 24px;
         line-height: 33px;
       }
