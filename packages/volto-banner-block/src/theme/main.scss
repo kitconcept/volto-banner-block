@@ -13,12 +13,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
     width: 100%;
     max-width: var(--layout-container-width, 1440px);
-    padding: 50px 1px 50px 200px;
     height: 300px;
+    padding: 50px 1px 50px 200px;
     margin: 0 auto;
-    overflow: hidden;
     background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     @media only screen and (max-width: 768px) {
       max-width: var(--narrow-container-width, 620px);
