@@ -88,7 +88,7 @@ export const BannerStylingSchema = ({ schema, formData, intl }) => {
     widget: 'blockWidth',
     title: intl.formatMessage(messages.BlockWidth),
     default: 'default',
-    filterActions: ['layout', 'default'],
+    filterActions: ['layout', 'default', 'full'],
   };
 
   return schema;
