@@ -1,3 +1,4 @@
+
 .banner.container {
   display: grid;
   grid-template-columns: 1fr;
@@ -12,21 +13,33 @@
   .banner-inner-container {
     grid-area: 1/1;
     z-index: 1;
+    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
-  .text {
+}
+
+.block.banner.has--block-width--full {
+  max-width: 100% !important;
+}
+
+.block-editor-banner .block.banner .ui.message {
+  height: 300px;
+}
+
+.has--block-width--layout,
+.has--block-width--full {
+  .banner-inner-container .text {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: var(--layout-container-width, 1440px);
     height: 100%;
     padding: 50px 0px 50px 1em;
     margin: 0 auto;
 
-    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     @media only screen and (max-width: 768px) {
       padding: 25px 0px 50px 1em;
       max-width: var(--narrow-container-width, 620px);
     }
+
     p {
       max-width: var(--narrow-container-width, 620px);
       margin-bottom: 0;
@@ -44,10 +57,11 @@
   }
 }
 
-.block.banner.has--block-width--full {
-  max-width: 100% !important;
+// Width-specific max-width values
+.has--block-width--layout .banner-inner-container .text {
+  max-width: var(--default-container-width, 1440px);
 }
 
-.block-editor-banner .block.banner .ui.message {
-  height: 300px;
+.has--block-width--full .banner-inner-container .text {
+  max-width: var(--layout-container-width, 1440px);
 }
