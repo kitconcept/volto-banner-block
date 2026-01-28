@@ -87,8 +87,8 @@ export const BannerStylingSchema = ({ schema, formData, intl }) => {
   schema.properties.styles.schema.properties['blockWidth:noprefix'] = {
     widget: 'blockWidth',
     title: intl.formatMessage(messages.BlockWidth),
-    default: 'default',
-    filterActions: ['layout', 'default'],
+    default: 'layout',
+    filterActions: ['layout', 'full'],
   };
 
   return schema;
