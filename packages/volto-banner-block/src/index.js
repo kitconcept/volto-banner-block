@@ -16,6 +16,7 @@ const applyConfig = (config) => {
     icon: showcaseSVG,
     view: BannerBlockView,
     edit: BannerBlockEdit,
+    blockModel: 3,
     blockSchema: BannerBlockSchema,
     schemaEnhancer: BannerStylingSchema,
     sidebarTab: 1,
