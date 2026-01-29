@@ -48,7 +48,8 @@
   }
 }
 
-.block.banner.has--block-width--full {
+.block.banner.has--block-width--full,
+.block.banner.full {
   max-width: 100% !important;
 }
 
@@ -57,14 +58,16 @@
 }
 
 // Width-specific max-width values
-.has--block-width--layout .banner-inner-container .text {
+.has--block-width--layout .banner-inner-container .text,
+.layout .banner-inner-container .text {
   max-width: var(--default-container-width, 940px);
   @media only screen and (max-width: 940px + 2 * 20px) {
     padding-left: 1em;
   }
 }
 
-.has--block-width--full .banner-inner-container .text {
+.has--block-width--full .banner-inner-container .text,
+.full .banner-inner-container .text {
   max-width: var(--layout-container-width, 1440px);
   @media only screen and (max-width: 1440px + 2 * 20px) {
     padding-left: 1em;
