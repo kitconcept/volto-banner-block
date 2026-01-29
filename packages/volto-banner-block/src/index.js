@@ -9,7 +9,6 @@ import './theme/main.scss';
 import showcaseSVG from '@plone/volto/icons/showcase.svg';
 
 const applyConfig = (config) => {
-
   config.blocks.blocksConfig.banner = {
     id: 'banner',
     title: 'Banner',
