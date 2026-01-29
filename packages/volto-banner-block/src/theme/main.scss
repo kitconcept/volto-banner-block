@@ -1,4 +1,3 @@
-
 .banner.container {
   display: grid;
   grid-template-columns: 1fr;
@@ -59,7 +58,7 @@
 
 // Width-specific max-width values
 .has--block-width--layout .banner-inner-container .text {
-  max-width: var(--default-container-width, 1440px);
+  max-width: var(--default-container-width, 940px);
 }
 
 .has--block-width--full .banner-inner-container .text {
