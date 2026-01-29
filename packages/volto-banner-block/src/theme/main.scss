@@ -9,23 +9,6 @@
     grid-area: 1/1;
     object-fit: cover;
   }
-  .banner-inner-container {
-    z-index: 1;
-    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    grid-area: 1/1;
-  }
-}
-
-.block.banner.has--block-width--full {
-  max-width: 100% !important;
-}
-
-.block-editor-banner .block.banner .ui.message {
-  height: 300px;
-}
-
-.has--block-width--layout,
-.has--block-width--full {
   .banner-inner-container .text {
     position: relative;
     overflow: hidden;
@@ -54,6 +37,19 @@
       }
     }
   }
+  .banner-inner-container {
+    z-index: 1;
+    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    grid-area: 1/1;
+  }
+}
+
+.block.banner.has--block-width--full {
+  max-width: 100% !important;
+}
+
+.block-editor-banner .block.banner .ui.message {
+  height: 300px;
 }
 
 // Width-specific max-width values
