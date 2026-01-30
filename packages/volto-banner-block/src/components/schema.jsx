@@ -38,7 +38,7 @@ const messages = defineMessages({
 });
 
 export const BannerBlockSchema = (props) => {
-  const {intl} = props;
+  const { intl } = props;
   const schema = {
     block: intl.formatMessage(messages.Banner),
     fieldsets: [
