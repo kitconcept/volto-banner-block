@@ -38,8 +38,9 @@ const messages = defineMessages({
 });
 
 export const BannerBlockSchema = (props) => {
-  return {
-    block: props.intl.formatMessage(messages.Banner),
+  const {intl} = props;
+  const schema = {
+    block: intl.formatMessage(messages.Banner),
     fieldsets: [
       {
         id: 'default',
@@ -52,7 +53,7 @@ export const BannerBlockSchema = (props) => {
 
     properties: {
       alt: {
-        title: props.intl.formatMessage(messages.AltText),
+        title: intl.formatMessage(messages.AltText),
         description: (
           <>
             <a
@@ -61,23 +62,21 @@ export const BannerBlockSchema = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {props.intl.formatMessage(messages.AltTextHintLinkText)}
+              {intl.formatMessage(messages.AltTextHintLinkText)}
             </a>{' '}
             {props.intl.formatMessage(messages.AltTextHint)}
           </>
         ),
       },
       text: {
-        title: props.intl.formatMessage(messages.Line1),
+        title: intl.formatMessage(messages.Line1),
       },
       additionalText: {
-        title: props.intl.formatMessage(messages.Line2),
+        title: intl.formatMessage(messages.Line2),
       },
     },
     required: [],
   };
-};
-export const BannerStylingSchema = ({ schema, formData, intl }) => {
   addStyling({ schema, intl });
 
   schema.properties.styles.schema.fieldsets[0].fields = [

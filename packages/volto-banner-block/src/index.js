@@ -1,9 +1,6 @@
 import BannerBlockEdit from '@kitconcept/volto-banner-block/components/Edit';
 import BannerBlockView from '@kitconcept/volto-banner-block/components/View';
-import {
-  BannerBlockSchema,
-  BannerStylingSchema,
-} from '@kitconcept/volto-banner-block/components/schema';
+import { BannerBlockSchema } from '@kitconcept/volto-banner-block/components/schema';
 import './theme/main.scss';
 
 import showcaseSVG from '@plone/volto/icons/showcase.svg';
@@ -17,7 +14,6 @@ const applyConfig = (config) => {
     view: BannerBlockView,
     edit: BannerBlockEdit,
     blockSchema: BannerBlockSchema,
-    schemaEnhancer: BannerStylingSchema,
     sidebarTab: 1,
   };
 

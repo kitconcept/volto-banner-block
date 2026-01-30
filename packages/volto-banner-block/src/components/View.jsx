@@ -1,10 +1,9 @@
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
-import cx from 'classnames';
 import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 
 const LegacyWrapper = (props) => (
-  <div className={cx('banner container')} style={props.style}>
+  <div className="banner container" style={props.style}>
     {props.children}
   </div>
 );
@@ -12,7 +11,6 @@ const LegacyWrapper = (props) => (
 const View = (props) => {
   const { data } = props;
   const Image = config.getComponent({ name: 'Image' }).component;
-
   return (
     <BlockWrapper {...props} ExtraWrapper={LegacyWrapper}>
       {data.url && (
