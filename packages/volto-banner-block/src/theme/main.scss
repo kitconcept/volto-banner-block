@@ -22,15 +22,14 @@
     padding-top: 50px;
     padding-right: 0px;
     padding-bottom: 50px;
-    margin: 0 auto;
 
     @media only screen and (max-width: 769px) {
       max-width: var(--narrow-container-width, 620px);
       padding-top: 25px;
       padding-right: 0px;
       padding-bottom: 50px;
-      margin: 0;
     }
+
     p {
       max-width: var(--narrow-container-width, 620px);
       margin-bottom: 0;
@@ -50,23 +49,19 @@
 
 .block.banner.has--block-width--full {
   max-width: 100% !important;
-}
-
-.block-editor-banner .block.banner .ui.message {
-  height: 300px;
-}
-
-// Width-specific max-width values
-.has--block-width--layout .banner-inner-container .text {
-  max-width: var(--default-container-width, 940px);
-  @media only screen and (max-width: 940px + 2 * 20px) {
-    padding-left: 1em;
+  .banner-inner-container {
+    padding: 0 1em;
+    .text {
+      max-width: var(--layout-container-width, 1440px);
+      margin-right: auto;
+      margin-left: auto;
+      @media only screen and (max-width: 769px) {
+        margin: 0;
+      }
+    }
   }
 }
 
-.has--block-width--full .banner-inner-container .text {
-  max-width: var(--layout-container-width, 1440px);
-  @media only screen and (max-width: 1440px + 2 * 20px) {
-    padding-left: 1em;
-  }
+.block-editor-banner .block.banner .banner-inner-container {
+  padding-left: 20px;
 }
