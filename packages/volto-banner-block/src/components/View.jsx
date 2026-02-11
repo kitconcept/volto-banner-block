@@ -1,22 +1,18 @@
-import MaybeWrap from '@plone/volto/components/manage/MaybeWrap/MaybeWrap';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
-import cx from 'classnames';
-import React from 'react';
+import { BlockWrapper } from '@kitconcept/volto-bm3-compat';
 
 const LegacyWrapper = (props) => (
-  <div className={cx('block banner', props.className)} style={props.style}>
+  <div className="banner container" style={props.style}>
     {props.children}
   </div>
 );
 
 const View = (props) => {
-  const { data, blocksConfig } = props;
-  const isBlockModelv3 = blocksConfig?.banner?.blockModel === 3;
+  const { data } = props;
   const Image = config.getComponent({ name: 'Image' }).component;
-
   return (
-    <MaybeWrap {...props} condition={!isBlockModelv3} as={LegacyWrapper}>
+    <BlockWrapper {...props} ExtraWrapper={LegacyWrapper}>
       {data.url && (
         <>
           <Image
@@ -25,13 +21,15 @@ const View = (props) => {
             className="image"
             loading="lazy"
           />
-          <div className="text">
-            {data.text && <p>{data?.text}</p>}
-            {data.additionalText && <p>{data?.additionalText}</p>}
+          <div className="banner-inner-container">
+            <div className="text">
+              {data.text && <p>{data?.text}</p>}
+              {data.additionalText && <p>{data?.additionalText}</p>}
+            </div>
           </div>
         </>
       )}
-    </MaybeWrap>
+    </BlockWrapper>
   );
 };
 

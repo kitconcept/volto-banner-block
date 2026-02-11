@@ -1,4 +1,6 @@
 import { defineMessages } from 'react-intl';
+import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   Banner: {
@@ -21,6 +23,10 @@ const messages = defineMessages({
     id: 'Describe the purpose of the image.',
     defaultMessage: 'Describe the purpose of the image.',
   },
+  BlockWidth: {
+    id: 'Block Width',
+    defaultMessage: 'Block Width',
+  },
   Line1: {
     id: 'Line 1',
     defaultMessage: 'Line 1',
@@ -32,8 +38,9 @@ const messages = defineMessages({
 });
 
 export const BannerBlockSchema = (props) => {
-  return {
-    block: props.intl.formatMessage(messages.Banner),
+  const { intl } = props;
+  const schema = {
+    block: intl.formatMessage(messages.Banner),
     fieldsets: [
       {
         id: 'default',
@@ -46,7 +53,7 @@ export const BannerBlockSchema = (props) => {
 
     properties: {
       alt: {
-        title: props.intl.formatMessage(messages.AltText),
+        title: intl.formatMessage(messages.AltText),
         description: (
           <>
             <a
@@ -55,19 +62,35 @@ export const BannerBlockSchema = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {props.intl.formatMessage(messages.AltTextHintLinkText)}
+              {intl.formatMessage(messages.AltTextHintLinkText)}
             </a>{' '}
             {props.intl.formatMessage(messages.AltTextHint)}
           </>
         ),
       },
       text: {
-        title: props.intl.formatMessage(messages.Line1),
+        title: intl.formatMessage(messages.Line1),
       },
       additionalText: {
-        title: props.intl.formatMessage(messages.Line2),
+        title: intl.formatMessage(messages.Line2),
       },
     },
     required: [],
   };
+  addStyling({ schema, intl });
+
+  schema.properties.styles.schema.fieldsets[0].fields = [
+    'blockWidth:noprefix',
+    ...schema.properties.styles.schema.fieldsets[0].fields,
+  ];
+
+  schema.properties.styles.schema.properties['blockWidth:noprefix'] = {
+    widget: 'blockWidth',
+    title: intl.formatMessage(messages.BlockWidth),
+    default: 'layout',
+    filterActions: ['layout', 'full'],
+    actions: config.blocks.widths,
+  };
+
+  return schema;
 };
