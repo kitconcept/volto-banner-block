@@ -5,23 +5,16 @@ context('Banner Block Acceptance Tests', () => {
     cy.viewport('macbook-16');
     cy.createContent({
       contentType: 'Document',
-      contentId: 'document',
-      contentTitle: 'Document',
+      contentId: 'my-page',
+      contentTitle: 'My Page',
     });
     cy.autologin();
-    cy.visit('/');
+    cy.visit('/my-page');
     cy.wait('@content');
   });
 
   it('As editor I can add a Banner block', () => {
-    cy.createContent({
-      contentType: 'Document',
-      contentId: 'blue-orchids',
-      contentTitle: 'Blue Orchids',
-      contentDescription: 'are growing on the mountain tops',
-      path: '/document',
-    });
-    cy.visit('/document/edit');
+    cy.visit('/my-page/edit');
     cy.wait('@schema');
 
     // WHEN I create a Banner block
@@ -42,7 +35,7 @@ context('Banner Block Acceptance Tests', () => {
     cy.get('#toolbar-save').click();
 
     // THEN I can see the Banner block
-    cy.visit('/document');
+    cy.visit('/my-page');
 
     cy.get('.block.banner .banner-inner-container .text p')
       .eq(0)
