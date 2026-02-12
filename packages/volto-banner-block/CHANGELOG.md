@@ -8,6 +8,16 @@
 
 <!-- towncrier release notes start -->
 
+## 1.2.0 (2026-02-12)
+
+### Feature
+
+- Add blockWidth widget @Tishasoumya-02 [#19](https://github.com/kitconcept/volto-banner-block/issue/19)
+
+### Internal
+
+- Update to latest Volto @Tishasoumya-02 [#updateVoltoVersion](https://github.com/kitconcept/volto-banner-block/issue/updateVoltoVersion)
+
 ## 1.1.0 (2025-07-23)
 
 ### Feature
