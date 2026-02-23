@@ -19,50 +19,55 @@ msgstr ""
 #. Default: "Alt text"
 #: components/schema
 msgid "Alt text"
-msgstr ""
+msgstr "Texto alternativo"
 
 #. Default: "Banner"
 #: components/Data
 #: components/schema
 msgid "Banner"
-msgstr ""
+msgstr "Banner"
 
 #. Default: "Banner preview"
 #: components/Data
 msgid "Banner preview"
-msgstr ""
+msgstr "Pré-visualização do banner"
+
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Largura do bloco"
 
 #. Default: "Clear block"
 #: components/Data
 msgid "Clear block"
-msgstr ""
+msgstr "Limpar bloco"
 
 #. Default: "Describe the purpose of the image."
 #: components/schema
 msgid "Describe the purpose of the image."
-msgstr ""
+msgstr "Descreva o propósito da imagem."
 
 #. Default: "Leave empty if the image is purely decorative."
 #: components/schema
 msgid "Leave empty if the image is purely decorative."
-msgstr ""
+msgstr "Deixe em branco se a imagem for puramente decorativa."
 
 #. Default: "Line 1"
 #: components/schema
 msgid "Line 1"
-msgstr ""
+msgstr "Linha 1"
 
 #. Default: "Line 2"
 #: components/schema
 msgid "Line 2"
-msgstr ""
+msgstr "Linha 2"
 
 #. Default: "No image selected"
 #: components/Data
 msgid "No image selected"
-msgstr ""
+msgstr "Nenhuma imagem selecionada"
 
 #. Default: "Open in a new tab"
 #: components/schema
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Abrir em nova aba"

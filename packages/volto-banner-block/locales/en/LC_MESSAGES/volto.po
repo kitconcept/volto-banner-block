@@ -27,6 +27,11 @@ msgstr ""
 msgid "Banner preview"
 msgstr ""
 
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr ""
+
 #. Default: "Clear block"
 #: components/Data
 msgid "Clear block"
