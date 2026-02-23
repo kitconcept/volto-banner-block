@@ -1,1 +1,1 @@
-Added pt-BR translations. @humanaice
+Added pt-BR translations + Updated Translations. @humanaice
