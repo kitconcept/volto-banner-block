@@ -5,12 +5,12 @@ msgstr ""
 "POT-Creation-Date: 2023-05-09 11:45-0400\n"
 "PO-Revision-Date: 2025-07-10 11:19+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
-"Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
-"MIME-Version: 1.0\n"
+"Language-Team: ES <LL@li.org>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
 "Preferred-Encodings: utf-8\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
@@ -24,7 +24,8 @@ msgid "Alt text"
 msgstr "Texto alternativo"
 
 #. Default: "Banner"
-#: components/Data components/schema
+#: components/Data
+#: components/schema
 msgid "Banner"
 msgstr "Banner"
 
@@ -32,6 +33,11 @@ msgstr "Banner"
 #: components/Data
 msgid "Banner preview"
 msgstr "Vista previa del banner"
+
+#. Default: "Block Width"
+#: components/schema
+msgid "Block Width"
+msgstr "Ancho del bloque"
 
 #. Default: "Clear block"
 #: components/Data
