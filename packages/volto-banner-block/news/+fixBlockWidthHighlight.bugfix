@@ -1,0 +1,1 @@
+Store the block width token name instead of the CSS style object, so the correct button is highlighted when re-editing the block and the `has--block-width--*` class is generated. @Tishasoumya-02

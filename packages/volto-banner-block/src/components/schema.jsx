@@ -89,7 +89,7 @@ export const BannerBlockSchema = (props) => {
     title: intl.formatMessage(messages.BlockWidth),
     default: 'layout',
     filterActions: ['layout', 'full'],
-    actions: config.blocks.widths,
+    actions: config.blocks.widths.map((width) => width.name),
   };
 
   return schema;
