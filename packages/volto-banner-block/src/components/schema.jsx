@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl';
 import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
-
+import config from '@plone/volto/registry';
 const messages = defineMessages({
   Banner: {
     id: 'Banner',
@@ -82,15 +82,13 @@ export const BannerBlockSchema = (props) => {
     'blockWidth:noprefix',
     ...schema.properties.styles.schema.fieldsets[0].fields,
   ];
-
   schema.properties.styles.schema.properties['blockWidth:noprefix'] = {
     widget: 'blockWidth',
     title: intl.formatMessage(messages.BlockWidth),
     default: 'layout',
-    actions: [
-      { name: 'layout', label: 'Layout' },
-      { name: 'full', label: 'Full' },
-    ],
+    actions: config.blocks.widths
+      .map((width) => width.name)
+      .filter((name) => ['layout', 'full'].includes(name)),
   };
 
   return schema;
