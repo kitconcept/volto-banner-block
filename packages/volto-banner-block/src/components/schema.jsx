@@ -86,6 +86,7 @@ export const BannerBlockSchema = (props) => {
     widget: 'blockWidth',
     title: intl.formatMessage(messages.BlockWidth),
     default: 'layout',
+    filterActions: ['layout', 'full'],
     actions: config.blocks.widths.map((width) => width.name),
   };
 

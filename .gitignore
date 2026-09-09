@@ -7,6 +7,8 @@ acceptance/node_modules
 .storybook-build
 build
 core
+packages/*
+!packages/volto-banner-block
 node_modules
 results
 yarn.lock
