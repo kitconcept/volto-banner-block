@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "@kitconcept/volto-banner-block": "workspace:*",
+    "@kitconcept/volto-light-theme": "workspace:*",
+    "@kitconcept/volto-bm3-compat": "workspace:*",
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*"
   },
@@ -43,7 +45,10 @@
   "pnpm": {
     "overrides": {
       "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
-      "react-refresh": "^0.14.2"
+      "react-refresh": "^0.14.2",
+      "@kitconcept/volto-light-theme": "workspace:*",
+      "@kitconcept/volto-bm3-compat": "workspace:*",
+      "react-aria-components": "catalog:"
     },
     "onlyBuiltDependencies": [
       "core-js",

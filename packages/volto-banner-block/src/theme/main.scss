@@ -1,5 +1,10 @@
 .banner.container {
+  // Tailwind's generic `container` utility caps max-width per breakpoint.
+  // The banner width is driven by `--block-width`, so neutralize it.
+  // Remove when CSS layers are resolved later
   display: grid;
+  width: 100%;
+  max-width: none;
   grid-template-columns: 1fr;
   grid-template-rows: 300px;
 
