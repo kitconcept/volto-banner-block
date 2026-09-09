@@ -8,6 +8,18 @@
 
 <!-- towncrier release notes start -->
 
+## 1.2.1 (2026-09-09)
+
+### Bugfix
+
+- Fix the block width highlight bug @Tishasoumya-02 
+- Fixed the release-it config pointing to the wrong path for the prepublish plugin, which broke `release` and `dry-release`. @iFlameing 
+- Neutralize the Tailwind `container` utility max-width caps on the banner wrapper, so the banner follows its block width. @Tishasoumya-02 
+
+### Internal
+
+- Updated README + added Screenshot (gif) and Screencast. @humanaice [#22](https://github.com/kitconcept/volto-banner-block/issue/22)
+
 ## 1.2.0 (2026-02-12)
 
 ### Feature
