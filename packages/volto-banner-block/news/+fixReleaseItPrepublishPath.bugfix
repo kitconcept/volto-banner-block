@@ -1,0 +1,1 @@
+Fixed the release-it config pointing to the wrong path for the prepublish plugin, which broke `release` and `dry-release`. @iFlameing
