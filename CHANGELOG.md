@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.3.0 (2026-11-06)
+
+### Feature
+
+- Support the `@blocks-schema` endpoint of Volto 19.6 for the Banner block, with its documentation, a schema that resolves outside the editor, and a data adapter for the settings form. Update to Volto 19.6.1. @ericof [#26](https://github.com/kitconcept/volto-banner-block/issue/26)
+
 ## 1.2.1 (2026-09-09)
 
 ### Bugfix
