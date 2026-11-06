@@ -48,7 +48,8 @@
       "react-refresh": "^0.14.2",
       "@kitconcept/volto-light-theme": "workspace:*",
       "@kitconcept/volto-bm3-compat": "workspace:*",
-      "react-aria-components": "catalog:"
+      "react-aria-components": "catalog:",
+      "webpack": "catalog:"
     },
     "onlyBuiltDependencies": [
       "core-js",

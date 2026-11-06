@@ -36,17 +36,16 @@ const messages = defineMessages({
   },
 });
 
-export const BannerBlockSchema = (props) => {
-  const { intl } = props;
+// Called by the editor with the block data, and by the @blocks-schema endpoint
+// with `intl` and `data` only, so it must not depend on any other prop.
+export const BannerBlockSchema = ({ data, intl }) => {
   const schema = {
     block: intl.formatMessage(messages.Banner),
     fieldsets: [
       {
         id: 'default',
         title: 'Default',
-        fields: [
-          ...(props.formData?.url ? ['alt', 'text', 'additionalText'] : []),
-        ],
+        fields: [...(data?.url ? ['alt', 'text', 'additionalText'] : [])],
       },
     ],
 
@@ -57,13 +56,13 @@ export const BannerBlockSchema = (props) => {
           <>
             <a
               href="https://www.w3.org/WAI/tutorials/images/decision-tree/"
-              title={props.intl.formatMessage(messages.openLinkInNewTab)}
+              title={intl.formatMessage(messages.openLinkInNewTab)}
               target="_blank"
               rel="noopener noreferrer"
             >
               {intl.formatMessage(messages.AltTextHintLinkText)}
             </a>{' '}
-            {props.intl.formatMessage(messages.AltTextHint)}
+            {intl.formatMessage(messages.AltTextHint)}
           </>
         ),
       },

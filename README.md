@@ -89,6 +89,9 @@ Visit http://localhost:3000/ in a browser, login, and check the awesome new feat
 
 This block does not have any configuration options.
 
+The `@blocks-schema` support of the Volto server, which publishes the schema and documentation of the block, needs Volto 19.6 or later.
+The add-on keeps working on earlier Volto 19 releases, which simply do not publish the block through that endpoint.
+
 ## Development
 
 The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
