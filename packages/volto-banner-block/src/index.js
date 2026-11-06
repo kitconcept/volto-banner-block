@@ -1,5 +1,6 @@
 import BannerBlockEdit from '@kitconcept/volto-banner-block/components/Edit';
 import BannerBlockView from '@kitconcept/volto-banner-block/components/View';
+import { BannerBlockDataAdapter } from '@kitconcept/volto-banner-block/components/dataAdapter';
 import { BannerBlockSchema } from '@kitconcept/volto-banner-block/components/schema';
 import './theme/main.scss';
 
@@ -14,6 +15,7 @@ const applyConfig = (config) => {
     view: BannerBlockView,
     edit: BannerBlockEdit,
     blockSchema: BannerBlockSchema,
+    dataAdapter: BannerBlockDataAdapter,
     sidebarTab: 1,
   };
 

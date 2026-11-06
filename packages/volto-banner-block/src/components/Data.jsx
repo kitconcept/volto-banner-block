@@ -7,6 +7,7 @@ import config from '@plone/volto/registry';
 import React from 'react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 
+import { BannerBlockDataAdapter } from './dataAdapter';
 import { BannerBlockSchema } from './schema';
 
 const messages = defineMessages({
@@ -23,7 +24,7 @@ const messages = defineMessages({
 const BannerBlockData = (props) => {
   const { data, block, onChangeBlock } = props;
   const intl = useIntl();
-  const schema = BannerBlockSchema({ formData: data, intl });
+  const schema = BannerBlockSchema({ data, intl });
 
   const Image = config.getComponent({ name: 'Image' }).component;
 
@@ -81,9 +82,12 @@ const BannerBlockData = (props) => {
       <BlockDataForm
         schema={schema}
         onChangeField={(id, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [id]: value,
+          BannerBlockDataAdapter({
+            block,
+            data,
+            id,
+            onChangeBlock,
+            value,
           });
         }}
         onChangeBlock={onChangeBlock}

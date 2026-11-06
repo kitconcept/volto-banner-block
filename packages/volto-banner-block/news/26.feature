@@ -1,0 +1,1 @@
+Support the `@blocks-schema` endpoint of Volto 19.6 for the Banner block, with its documentation, a schema that resolves outside the editor, and a data adapter for the settings form. Update to Volto 19.6.1. @ericof
